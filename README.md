@@ -13,9 +13,10 @@ Source: [UCI Bank Marketing](https://archive.ics.uci.edu/ml/datasets/Bank%2BMark
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 The best performing model was found after studying how a classical approach using scikit-learn regression can be compared versus the different options available in Azure ML. 
 To be able to compare the different approachs, the metric used to compare was the accuracy of the model, with the following results:
- - For the scikit-learn model, the accuracy was 91.17%
- - For the Hyperparameter tuning, where the Regularization strength was allowed to be randomly selected from a uniform distribution of (0.01 to 0.99), the accuracy was 91.4%, or slightly better than for the scikit.
- - Finally, by allowing Azure to use AutoML to select the best model and run, we were able to increase the accuracy to 91.5%. In this case, the model MaxAbsScaler, LightGBM was selected by Azure as the best performing. 
+ - For the scikit-learn model, the accuracy was 90.7%
+ - For the Hyperparameter tuning, where the Regularization strength was allowed to be randomly selected from a uniform distribution of (0.01 to 0.99), the accuracy was 91.3%, or slightly better than for the scikit (for a regularization strength of 0.266).
+ - Finally, by allowing Azure to use AutoML to select the best model and run, we were able to increase the accuracy to 91.7%. In this case, the model VotingEnsemble was selected by Azure as the best performing.
+The max_item hyperparameter keeps the number of iterations under control to avoid iterating the model in case the model does not converge. 
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
