@@ -16,6 +16,7 @@ To be able to compare the different approachs, the metric used to compare was th
  - For the scikit-learn model, the accuracy was 90.7%
  - For the Hyperparameter tuning, where the Regularization strength was allowed to be randomly selected from a uniform distribution of (0.01 to 0.99), the accuracy was 91.3%, or slightly better than for the scikit (for a regularization strength of 0.266).
  - Finally, by allowing Azure to use AutoML to select the best model and run, we were able to increase the accuracy to 91.7%. In this case, the model VotingEnsemble was selected by Azure as the best performing.
+
 The max_item hyperparameter keeps the number of iterations under control to avoid iterating the model in case the model does not converge. 
 
 ## Scikit-learn Pipeline
